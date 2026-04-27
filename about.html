@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Pragadeesh Kumar S</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.about-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem}
+.stat-box{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.2rem;position:relative;overflow:hidden}
+.stat-box::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--cyan),transparent)}
+.stat-num{font-family:'Orbitron',sans-serif;font-size:2rem;font-weight:900;color:var(--cyan);text-shadow:0 0 20px rgba(0,245,212,0.3)}
+.stat-label{font-size:0.7rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-top:2px}
+.about-badge{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1rem;font-size:0.82rem;color:var(--muted);display:flex;align-items:center;gap:10px;margin-bottom:0.8rem}
+.about-text{color:var(--muted);line-height:1.9;font-size:0.94rem}
+.about-text p+p{margin-top:1rem}
+.about-text strong{color:var(--cyan);font-weight:500}
+
+/* Traits */
+.traits{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-top:2.5rem}
+.trait{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem;display:flex;align-items:center;gap:10px}
+.trait-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.trait-text{font-size:0.8rem;color:var(--muted)}
+.trait-text strong{color:var(--text);display:block;font-size:0.82rem;margin-bottom:1px}
+
+/* Timeline block */
+.timeline{margin-top:3rem;padding-top:3rem;border-top:1px solid var(--border)}
+.tl-title{font-family:'Orbitron',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-bottom:1.5rem}
+.tl-list{display:flex;flex-direction:column;gap:0;position:relative}
+.tl-list::before{content:'';position:absolute;left:16px;top:0;bottom:0;width:1px;background:linear-gradient(180deg,var(--cyan),rgba(0,245,212,0.1))}
+.tl-item{padding-left:3rem;padding-bottom:2rem;position:relative}
+.tl-dot{position:absolute;left:10px;top:4px;width:13px;height:13px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px rgba(0,245,212,0.5);border:2px solid var(--bg)}
+.tl-year{font-family:'Orbitron',sans-serif;font-size:0.63rem;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px}
+.tl-event{font-size:0.87rem;color:var(--text);font-weight:500;margin-bottom:2px}
+.tl-sub{font-size:0.78rem;color:var(--muted)}
+
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr}
+  .traits{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">PK<span></span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="page-hero">
+    <div class="gblob gb1"></div><div class="gblob gb2"></div>
+    <div class="page-hero-inner">
+      <div class="sec-badge" style="margin-bottom:0.6rem">About Me</div>
+      <h1>Wiring Ideas <span>Into Reality</span></h1>
+      <p>Final-year ECE student with a deep focus on embedded systems, IoT, and firmware development — where hardware meets intelligence.</p>
+    </div>
+  </div>
+
+  <div class="sec-outer">
+    <div class="sec-inner">
+      <div class="about-grid fade-in">
+        <div>
+          <div class="about-stats">
+            <div class="stat-box"><div class="stat-num">8.45</div><div class="stat-label">CGPA</div></div>
+            <div class="stat-box"><div class="stat-num">4</div><div class="stat-label">Projects</div></div>
+            <div class="stat-box"><div class="stat-num">2</div><div class="stat-label">Internships</div></div>
+            <div class="stat-box"><div class="stat-num">6</div><div class="stat-label">Certifications</div></div>
+          </div>
+          <div class="about-badge">🎓&nbsp;&nbsp;Saveetha Engineering College · B.E. ECE</div>
+          <div class="about-badge">📍&nbsp;&nbsp;Chennai, Tamil Nadu, India</div>
+          <div class="about-badge">🎯&nbsp;&nbsp;Final Year · Class of 2025</div>
+
+          <div class="traits">
+            <div class="trait"><div class="trait-dot" style="background:var(--cyan)"></div><div class="trait-text"><strong>Systems Thinker</strong>Hardware to cloud architecture</div></div>
+            <div class="trait"><div class="trait-dot" style="background:var(--blue)"></div><div class="trait-text"><strong>RTOS Developer</strong>Concurrent task scheduling</div></div>
+            <div class="trait"><div class="trait-dot" style="background:var(--purple)"></div><div class="trait-text"><strong>IoT Builder</strong>End-to-end sensor networks</div></div>
+            <div class="trait"><div class="trait-dot" style="background:var(--amber)"></div><div class="trait-text"><strong>PCB Designer</strong>From schematic to board</div></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="about-text">
+            <p>I'm <strong>Pragadeesh Kumar S</strong>, a final-year ECE student with a deep focus on <strong>Embedded Systems, IoT, and Firmware Development</strong>. I thrive at the intersection of hardware and software — where a few lines of C can bring a sensor to life or make a machine decide in milliseconds.</p>
+            <p>My hands-on experience spans <strong>RTOS-based scheduling</strong>, real-time biomedical monitoring, wireless communication protocols, and PCB-level hardware design. I've interned at both a PCB manufacturing company and an RF communications firm — grounding my theoretical knowledge in production-grade practice.</p>
+            <p>I'm driven by one question: <strong>how can embedded intelligence solve problems that matter?</strong> Whether it's preventing drunk driving, harvesting ambient energy, or detecting fires before they spread — my projects are built with that mission in mind.</p>
+            <p>Outside of hardware, I'm equally comfortable writing Python pipelines for sensor data, architecting MQTT-based IoT dashboards, or analysing RF signals on a spectrum analyzer. I believe the best embedded engineers speak both languages — silicon <strong>and</strong> software.</p>
+          </div>
+
+          <div class="timeline fade-in">
+            <div class="tl-title">// Journey Log</div>
+            <div class="tl-list">
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">2021</div>
+                <div class="tl-event">Enrolled — B.E. ECE</div>
+                <div class="tl-sub">Saveetha Engineering College, Chennai</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">Jun–Jul 2023</div>
+                <div class="tl-event">PCB &amp; Embedded Hardware Intern</div>
+                <div class="tl-sub">Ecopmin Technologies Pvt Ltd — SMT assembly &amp; multilayer PCB design</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">Jan 2024</div>
+                <div class="tl-event">Radio Communication Systems Intern</div>
+                <div class="tl-sub">KrishTech — RF signal analysis &amp; spectrum management</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot" style="background:var(--amber);box-shadow:0 0 10px rgba(245,158,11,0.5)"></div>
+                <div class="tl-year">2025</div>
+                <div class="tl-event">Final Year — Graduation</div>
+                <div class="tl-sub">Open to embedded systems &amp; IoT roles</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p style="margin-bottom:0.4rem">Engineered by <span>Pragadeesh Kumar S</span></p>
+  <p>B.E. Electronics &amp; Communication Engineering · Saveetha Engineering College · 2025</p>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>

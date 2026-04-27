@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experience | Pragadeesh Kumar S</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+/* Experience cards */
+.exp-list{display:flex;flex-direction:column;gap:1.5rem}
+.exp-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.6rem;position:relative;overflow:hidden;transition:border-color 0.2s}
+.exp-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--cyan),var(--blue))}
+.exp-card:hover{border-color:var(--border2)}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:0.4rem;flex-wrap:wrap}
+.exp-role{font-family:'Orbitron',sans-serif;font-size:0.85rem;font-weight:700;color:var(--text)}
+.exp-period{font-size:0.7rem;color:var(--cyan);letter-spacing:1px;text-transform:uppercase;padding:0.25rem 0.7rem;background:rgba(0,245,212,0.07);border:1px solid rgba(0,245,212,0.15);border-radius:4px;white-space:nowrap}
+.exp-company{font-size:0.8rem;color:var(--blue);font-weight:500;margin-bottom:0.9rem}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.exp-bullets li{font-size:0.82rem;color:var(--muted);padding-left:1.2rem;position:relative;line-height:1.7}
+.exp-bullets li::before{content:'›';position:absolute;left:0;color:var(--cyan);font-size:1rem;line-height:1.5}
+.exp-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1rem}
+
+/* Education */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.edu-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.6rem;position:relative;overflow:hidden;transition:border-color 0.2s}
+.edu-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--purple),transparent)}
+.edu-card:hover{border-color:var(--border2)}
+.edu-degree{font-family:'Orbitron',sans-serif;font-size:0.8rem;font-weight:700;margin-bottom:0.4rem;line-height:1.4}
+.edu-school{font-size:0.85rem;color:var(--blue);font-weight:500;margin-bottom:0.5rem}
+.edu-year{font-size:0.72rem;color:var(--muted);margin-bottom:0.8rem;letter-spacing:0.5px}
+.edu-score{display:inline-flex;align-items:center;gap:8px;padding:0.4rem 0.9rem;background:rgba(0,245,212,0.06);border:1px solid var(--border2);border-radius:4px}
+.edu-score-num{font-family:'Orbitron',sans-serif;font-size:1.1rem;font-weight:900;color:var(--cyan)}
+.edu-score-label{font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+
+/* Certifications */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.cert-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.2rem;display:flex;gap:12px;align-items:flex-start;transition:border-color 0.2s}
+.cert-card:hover{border-color:var(--border2)}
+.cert-icon{width:36px;height:36px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1rem}
+.cert-name{font-size:0.82rem;font-weight:500;color:var(--text);margin-bottom:0.25rem;line-height:1.4}
+.cert-org{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+
+@media(max-width:640px){.edu-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">PK<span></span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="page-hero">
+    <div class="gblob gb1"></div><div class="gblob gb2"></div>
+    <div class="page-hero-inner">
+      <div class="sec-badge" style="margin-bottom:0.6rem">Field Record</div>
+      <h1>Experience &amp; <span>Education</span></h1>
+      <p>Industry internships, academic milestones, and verified credentials — the full record.</p>
+    </div>
+  </div>
+
+  <div class="sec-outer">
+    <div class="sec-inner">
+
+      <!-- EXPERIENCE -->
+      <div class="sec-badge">Work Experience</div>
+      <h2 class="sec-title">Internships</h2>
+      <div class="sec-line"></div>
+      <div class="exp-list fade-in">
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Intern — PCB &amp; Embedded Hardware</div>
+              <div class="exp-company">Ecopmin Technologies Pvt Ltd</div>
+            </div>
+            <div class="exp-period">Jun – Jul 2023</div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Worked on SMT PCB manufacturing and assembly processes in a production environment.</li>
+            <li>Assisted in PCB design, component placement, and precision soldering on multilayer boards.</li>
+            <li>Gained practical exposure to embedded hardware development workflows and functional testing procedures.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag c">PCB Design</span><span class="tag c">SMT Assembly</span><span class="tag b">Hardware Testing</span><span class="tag">Multilayer PCB</span>
+          </div>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Intern — Radio Communication Systems</div>
+              <div class="exp-company">KrishTech</div>
+            </div>
+            <div class="exp-period">Jan 2024</div>
+          </div>
+          <ul class="exp-bullets">
+            <li>Studied the fundamentals of RF communication, signal transmission, and modulation techniques.</li>
+            <li>Assisted in the implementation and analysis of basic RF system configurations.</li>
+            <li>Developed hands-on understanding of spectrum management and antenna characteristics.</li>
+          </ul>
+          <div class="exp-tags">
+            <span class="tag c">RF Communication</span><span class="tag b">Signal Analysis</span><span class="tag b">Spectrum Management</span><span class="tag">Antennas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div style="margin-top:4rem">
+        <div class="sec-badge">Academic Record</div>
+        <h2 class="sec-title">Education</h2>
+        <div class="sec-line"></div>
+        <div class="edu-grid fade-in">
+          <div class="edu-card">
+            <div class="edu-degree">B.E. Electronics &amp; Communication Engineering</div>
+            <div class="edu-school">Saveetha Engineering College</div>
+            <div class="edu-year">2021 – 2025 · Chennai, Tamil Nadu</div>
+            <div class="edu-score"><div class="edu-score-num">8.45</div><div class="edu-score-label">CGPA</div></div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-degree">Higher Secondary (12th Grade)</div>
+            <div class="edu-school">Paree Matric Hr. Sec. School</div>
+            <div class="edu-year">2021</div>
+            <div class="edu-score"><div class="edu-score-num">81.6<span style="font-size:0.9rem">%</span></div><div class="edu-score-label">Score</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div style="margin-top:4rem">
+        <div class="sec-badge">Verified Credentials</div>
+        <h2 class="sec-title">Certifications</h2>
+        <div class="sec-line"></div>
+        <div class="cert-grid fade-in">
+          <div class="cert-card">
+            <div class="cert-icon" style="background:rgba(0,245,212,0.08);border:1px solid var(--border)">🌐</div>
+            <div><div class="cert-name">Internet of Things</div><div class="cert-org">NPTEL</div></div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon" style="background:rgba(14,165,233,0.08);border:1px solid var(--border)">☁</div>
+            <div><div class="cert-name">Cloud Computing</div><div class="cert-org">NPTEL</div></div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon" style="background:rgba(168,85,247,0.08);border:1px solid var(--border)">🐍</div>
+            <div><div class="cert-name">Python Programming</div><div class="cert-org">NPTEL</div></div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon" style="background:rgba(0,245,212,0.08);border:1px solid var(--border)">🔌</div>
+            <div><div class="cert-name">Embedded Systems Fundamentals</div><div class="cert-org">Coursera</div></div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon" style="background:rgba(245,158,11,0.08);border:1px solid var(--border)">🤖</div>
+            <div><div class="cert-name">Prompt Engineering</div><div class="cert-org">Coursera</div></div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon" style="background:rgba(255,61,90,0.08);border:1px solid var(--border)">🏛</div>
+            <div><div class="cert-name">Embedded Systems</div><div class="cert-org">NIELIT</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p style="margin-bottom:0.4rem">Engineered by <span>Pragadeesh Kumar S</span></p>
+  <p>B.E. Electronics &amp; Communication Engineering · Saveetha Engineering College · 2025</p>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>

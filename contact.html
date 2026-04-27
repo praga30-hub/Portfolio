@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Pragadeesh Kumar S</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.contact-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem}
+
+/* Contact items */
+.contact-desc{color:var(--muted);font-size:0.93rem;line-height:1.9;margin-bottom:1.8rem}
+.c-item{display:flex;align-items:center;gap:14px;margin-bottom:0.8rem;padding:0.9rem;background:var(--card);border:1px solid var(--border);border-radius:8px;transition:border-color 0.2s,transform 0.2s;text-decoration:none}
+.c-item:hover{border-color:var(--border2);transform:translateX(4px)}
+.c-icon{width:38px;height:38px;border-radius:8px;flex-shrink:0;background:rgba(0,245,212,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1rem}
+.c-label{font-size:0.63rem;color:var(--muted);text-transform:uppercase;letter-spacing:2px}
+.c-val{font-size:0.87rem;color:var(--text)}
+.c-arrow{margin-left:auto;color:var(--cyan);opacity:0;transform:translateX(-6px);transition:all 0.2s;font-size:0.85rem}
+.c-item:hover .c-arrow{opacity:1;transform:none}
+
+/* Form */
+.contact-form{display:flex;flex-direction:column;gap:0.9rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.9rem}
+.fgroup{display:flex;flex-direction:column;gap:0.4rem}
+.fgroup label{font-size:0.63rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:600;font-family:'Orbitron',sans-serif}
+.fgroup input,.fgroup textarea,.fgroup select{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:0.8rem 1rem;color:var(--text);font-family:'Space Grotesk',sans-serif;font-size:0.88rem;outline:none;transition:border-color 0.2s,box-shadow 0.2s;resize:none;appearance:none}
+.fgroup input:focus,.fgroup textarea:focus,.fgroup select:focus{border-color:rgba(0,245,212,0.35);box-shadow:0 0 0 3px rgba(0,245,212,0.05)}
+.fgroup textarea{min-height:120px}
+.form-footer{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+#form-success{color:var(--cyan);font-size:0.8rem;display:none;letter-spacing:1px}
+
+/* Availability card */
+.avail-card{background:rgba(0,245,212,0.04);border:1px solid rgba(0,245,212,0.15);border-radius:10px;padding:1.2rem 1.4rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:14px}
+.avail-dot{width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan);flex-shrink:0;animation:pulse 2s infinite}
+.avail-text{font-size:0.83rem;color:var(--text);line-height:1.5}
+.avail-text span{color:var(--muted);font-size:0.75rem;display:block;margin-top:2px}
+
+@media(max-width:900px){.contact-wrap{grid-template-columns:1fr}}
+@media(max-width:640px){.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">PK<span></span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="page-hero">
+    <div class="gblob gb1"></div><div class="gblob gb2"></div>
+    <div class="page-hero-inner">
+      <div class="sec-badge" style="margin-bottom:0.6rem">Establish Link</div>
+      <h1>Get <span>In Touch</span></h1>
+      <p>Open to internships, full-time roles, and interesting collaborations in embedded systems, IoT, and firmware engineering.</p>
+    </div>
+  </div>
+
+  <div class="sec-outer">
+    <div class="sec-inner">
+      <div class="contact-wrap fade-in">
+
+        <!-- Left column -->
+        <div>
+          <div class="avail-card">
+            <div class="avail-dot"></div>
+            <div class="avail-text">
+              Currently available for opportunities
+              <span>Open to roles in embedded systems, IoT &amp; firmware engineering</span>
+            </div>
+          </div>
+
+          <p class="contact-desc">I'm actively seeking internship and full-time roles in embedded systems, IoT, and firmware engineering. Open to collaborations, research projects, or just a good technical conversation.</p>
+
+          <a class="c-item" href="mailto:praga30kumar@gmail.com">
+            <div class="c-icon">📧</div>
+            <div><div class="c-label">Email</div><div class="c-val">praga30kumar@gmail.com</div></div>
+            <span class="c-arrow">→</span>
+          </a>
+          <a class="c-item" href="tel:+919600217761">
+            <div class="c-icon">📱</div>
+            <div><div class="c-label">Phone</div><div class="c-val">+91 96002 17761</div></div>
+            <span class="c-arrow">→</span>
+          </a>
+          <a class="c-item" href="https://www.linkedin.com/in/pragadeesh-kumar-3813862a8" target="_blank" rel="noopener">
+            <div class="c-icon">🔗</div>
+            <div><div class="c-label">LinkedIn</div><div class="c-val">pragadeesh-kumar-3813862a8</div></div>
+            <span class="c-arrow">→</span>
+          </a>
+          <a class="c-item" href="https://github.com/pragadeeshkumars" target="_blank" rel="noopener">
+            <div class="c-icon">💻</div>
+            <div><div class="c-label">GitHub</div><div class="c-val">github.com/pragadeeshkumars</div></div>
+            <span class="c-arrow">→</span>
+          </a>
+          <div class="c-item" style="cursor:default">
+            <div class="c-icon">📍</div>
+            <div><div class="c-label">Location</div><div class="c-val">Chennai, Tamil Nadu, India</div></div>
+          </div>
+        </div>
+
+        <!-- Right column: form -->
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="fgroup"><label>First Name</label><input type="text" placeholder="John" required></div>
+            <div class="fgroup"><label>Last Name</label><input type="text" placeholder="Doe"></div>
+          </div>
+          <div class="fgroup"><label>Email</label><input type="email" placeholder="john@example.com" required></div>
+          <div class="fgroup">
+            <label>Subject</label>
+            <select>
+              <option value="" disabled selected>Select a topic...</option>
+              <option>Job Opportunity</option>
+              <option>Internship</option>
+              <option>Project Collaboration</option>
+              <option>Research</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fgroup"><label>Message</label><textarea placeholder="Tell me about your project or opportunity..." required></textarea></div>
+          <div class="form-footer">
+            <button type="submit" class="btn-primary">Transmit Message →</button>
+            <p id="form-success">✓ Transmitted. I'll respond soon.</p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p style="margin-bottom:0.4rem">Engineered by <span>Pragadeesh Kumar S</span></p>
+  <p>B.E. Electronics &amp; Communication Engineering · Saveetha Engineering College · 2025</p>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending...';
+  btn.style.opacity = '0.7';
+  setTimeout(() => {
+    document.getElementById('form-success').style.display = 'block';
+    e.target.reset();
+    btn.textContent = 'Transmit Message →';
+    btn.style.opacity = '1';
+    setTimeout(() => document.getElementById('form-success').style.display = 'none', 4000);
+  }, 800);
+}
+</script>
+</body>
+</html>
