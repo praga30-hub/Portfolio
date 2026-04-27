@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Pragadeesh Kumar S</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem}
+.proj-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.25s,transform 0.25s,box-shadow 0.25s;display:flex;flex-direction:column}
+.proj-card:hover{border-color:rgba(0,245,212,0.22);transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,245,212,0.07)}
+.proj-accent-line{height:2px;width:0;transition:width 0.45s}
+.proj-card:hover .proj-accent-line{width:100%}
+.proj-header{padding:1.4rem 1.4rem 0.9rem;display:flex;align-items:flex-start;gap:1rem}
+.proj-icon-wrap{width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.proj-title{font-family:'Orbitron',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.5px;line-height:1.4;margin-bottom:0.3rem}
+.proj-cat{font-size:0.65rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+.proj-divider{height:1px;background:var(--border);margin:0 1.4rem}
+.proj-body{padding:1.1rem 1.4rem 1.4rem;flex:1;display:flex;flex-direction:column}
+.proj-impact{background:rgba(0,245,212,0.04);border:1px solid rgba(0,245,212,0.1);border-radius:6px;padding:0.7rem 0.9rem;margin-bottom:0.9rem;font-size:0.77rem;color:var(--cyan);line-height:1.6}
+.proj-desc{font-size:0.81rem;color:var(--muted);line-height:1.8;margin-bottom:1.1rem;flex:1}
+
+/* Filter bar */
+.filter-bar{display:flex;gap:0.6rem;flex-wrap:wrap;margin-bottom:2rem}
+.filter-btn{background:var(--card);border:1px solid var(--border);border-radius:4px;padding:0.45rem 1rem;font-size:0.68rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);cursor:pointer;transition:all 0.2s;font-family:'Space Grotesk',sans-serif}
+.filter-btn:hover,.filter-btn.active{background:rgba(0,245,212,0.07);border-color:var(--border2);color:var(--cyan)}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">PK<span></span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-wrapper">
+  <div class="page-hero">
+    <div class="gblob gb1"></div><div class="gblob gb2"></div>
+    <div class="page-hero-inner">
+      <div class="sec-badge" style="margin-bottom:0.6rem">Mission Log</div>
+      <h1>Featured <span>Projects</span></h1>
+      <p>Real-world embedded systems and IoT builds — each solving a tangible problem through hardware intelligence.</p>
+    </div>
+  </div>
+
+  <div class="sec-outer">
+    <div class="sec-inner">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="rtos">RTOS</button>
+        <button class="filter-btn" data-filter="iot">IoT</button>
+        <button class="filter-btn" data-filter="pcb">PCB Design</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="proj-card fade-in" data-tags="rtos biomedical">
+          <div class="proj-accent-line" style="background:linear-gradient(90deg,#a855f7,transparent)"></div>
+          <div class="proj-header">
+            <div class="proj-icon-wrap" style="background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.2)">💓</div>
+            <div><div class="proj-title">Tremor Correlation Machine</div><div class="proj-cat">Biomedical · RTOS · Real-Time</div></div>
+          </div>
+          <div class="proj-divider"></div>
+          <div class="proj-body">
+            <div class="proj-impact">◈&nbsp; Real-time health monitoring with RTOS-based scheduling — dramatically improved system response time and task efficiency for concurrent biomedical data processing.</div>
+            <p class="proj-desc">A real-time embedded health monitoring system using biomedical sensors to simultaneously track heart rate and stress levels. Built on Arduino with FreeRTOS-based task scheduling, the system manages sensor polling, data processing, and output display as independent concurrent tasks — achieving low-latency response even under peak load.</p>
+            <div class="tags"><span class="tag c">Arduino</span><span class="tag c">RTOS</span><span class="tag p">Biomedical Sensors</span><span class="tag b">Heart Rate</span><span class="tag">Real-Time</span><span class="tag">C</span></div>
+          </div>
+        </div>
+
+        <div class="proj-card fade-in" data-tags="rtos iot safety">
+          <div class="proj-accent-line" style="background:linear-gradient(90deg,#ff3d5a,transparent)"></div>
+          <div class="proj-header">
+            <div class="proj-icon-wrap" style="background:rgba(255,61,90,0.1);border:1px solid rgba(255,61,90,0.2)">🚨</div>
+            <div><div class="proj-title">Drunk Driver Alert System</div><div class="proj-cat">IoT Safety · RTOS · Vehicle</div></div>
+          </div>
+          <div class="proj-divider"></div>
+          <div class="proj-body">
+            <div class="proj-impact">◈&nbsp; IoT-based impairment detection with RTOS for concurrent task management — detects alcohol levels and prevents ignition with improved responsiveness and system reliability.</div>
+            <p class="proj-desc">An IoT-based vehicle safety system that detects driver alcohol levels using an MQ-3 sensor and prevents ignition when thresholds are exceeded. RTOS-based scheduling enables concurrent management of sensor sampling, threshold evaluation, GSM alerting, and ignition control.</p>
+            <div class="tags"><span class="tag c">RTOS</span><span class="tag c">IoT</span><span class="tag b">MQ-3 Sensor</span><span class="tag b">GSM</span><span class="tag">Arduino</span><span class="tag">C</span></div>
+          </div>
+        </div>
+
+        <div class="proj-card fade-in" data-tags="pcb power">
+          <div class="proj-accent-line" style="background:linear-gradient(90deg,#0ea5e9,transparent)"></div>
+          <div class="proj-header">
+            <div class="proj-icon-wrap" style="background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.2)">⚡</div>
+            <div><div class="proj-title">Wireless Charging Pad</div><div class="proj-cat">Power Electronics · PCB Design</div></div>
+          </div>
+          <div class="proj-divider"></div>
+          <div class="proj-body">
+            <div class="proj-impact">◈&nbsp; Optimised efficiency and safety mechanisms in a custom-designed embedded wireless power transfer system — from concept through PCB fabrication.</div>
+            <p class="proj-desc">Designed and developed an embedded wireless power transfer system using inductive coupling principles. The custom PCB integrates over-temperature protection and foreign-object detection circuitry for safe, reliable operation.</p>
+            <div class="tags"><span class="tag c">PCB Design</span><span class="tag c">Embedded</span><span class="tag b">Inductive Coupling</span><span class="tag">Power Electronics</span><span class="tag">Hardware Safety</span></div>
+          </div>
+        </div>
+
+        <div class="proj-card fade-in" data-tags="iot energy sensing">
+          <div class="proj-accent-line" style="background:linear-gradient(90deg,#00f5d4,transparent)"></div>
+          <div class="proj-header">
+            <div class="proj-icon-wrap" style="background:rgba(0,245,212,0.08);border:1px solid rgba(0,245,212,0.18)">💧</div>
+            <div><div class="proj-title">AQUA-GEN Smart System</div><div class="proj-cat">IoT · Energy Harvesting · Sensing</div></div>
+          </div>
+          <div class="proj-divider"></div>
+          <div class="proj-body">
+            <div class="proj-impact">◈&nbsp; Fuses piezoelectric energy harvesting with live environmental monitoring — a self-sustaining IoT node that generates power from its own surroundings.</div>
+            <p class="proj-desc">An IoT-enabled smart system that integrates piezoelectric energy generation with real-time environmental monitoring. Harvests mechanical energy from water flow or vibration, conditioning output to power onboard sensors tracking temperature, humidity, and water quality.</p>
+            <div class="tags"><span class="tag c">IoT</span><span class="tag c">ESP32</span><span class="tag b">Piezoelectric</span><span class="tag b">Energy Harvest</span><span class="tag">Environmental Sensing</span><span class="tag">Python</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p style="margin-bottom:0.4rem">Engineered by <span>Pragadeesh Kumar S</span></p>
+  <p>B.E. Electronics &amp; Communication Engineering · Saveetha Engineering College · 2025</p>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+// Filter logic
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.proj-card').forEach(card => {
+      if (filter === 'all' || card.dataset.tags.includes(filter)) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
